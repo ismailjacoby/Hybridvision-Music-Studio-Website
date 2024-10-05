@@ -3,6 +3,8 @@
 A **Music Studio** website built with **Angular**, **Spring Boot**, **Stripe**, **AWS S3**, and **Docker**. 
 This platform allows users to explore the studio's services, purchase music productions, and sample packs, while providing an admin panel to manage users and content.
 
+This project was built as the **final project** for my **"9 month Java Angular Training"** and was presented in front of a jury.
+
 ![Hybridvision Gif](https://github.com/user-attachments/assets/2a16bb4b-37da-4281-9c19-df265d1a2ff8)
 
 ## Features
