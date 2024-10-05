@@ -1,0 +1,102 @@
+/* Main Container */
+.signup-container {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Title */
+h2 {
+  font-family: 'Drukwide', sans-serif;
+}
+
+
+/* Input */
+.form input {
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto 10px;
+  font-family: Sequel, sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline-color: black;
+}
+
+/* Submit Button */
+.submit-btn {
+  border: none;
+  background-color: black;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.submit-btn:disabled{
+  opacity: 0.25;
+}
+
+.submit-btn:hover {
+  transform: scale(1.01);
+  text-decoration: underline;
+}
+
+/* Login */
+p{
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+}
+
+#login-btn{
+  color: black;
+}
+
+#login-btn:hover{
+  cursor: pointer;
+}
+
+/* Message */
+.message-box{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Success Message */
+.success-message {
+  font-family: 'Sequel', sans-serif;
+  color: #32ef3b;
+  font-size: 12px;
+}
+
+/* Error Message */
+.error-message {
+  font-family: 'Sequel', sans-serif;
+  color: #EF3232;
+  font-size: 12px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Error Icon */
+.error-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+
+

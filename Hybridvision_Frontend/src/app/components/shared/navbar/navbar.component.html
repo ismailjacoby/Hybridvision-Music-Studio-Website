@@ -1,0 +1,72 @@
+<!-- Main Content -->
+<header class="header">
+  <div class="header-content">
+    <!-- Logo -->
+    <img src="assets/images/logos/Hv%20logo%20white.png" class="nav-logo">
+
+    <!-- Links -->
+    <nav class="nav-links" [class.open]="isMenuOpen" (click)="toggleMenu()">
+      <ul class="nav-list">
+        <li class="nav-item"><a routerLink="/home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a routerLink="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a routerLink="/services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a routerLink="/productions" class="nav-link">Productions</a></li>
+        <li class="nav-item"><a routerLink="/samplepacks" class="nav-link">Sample Packs</a></li>
+        <li class="nav-item"><a routerLink="/contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Icons -->
+    <div class="nav-icons show">
+
+      <!-- Wishlist Icon -->
+      <a routerLink="/wishlist" class="icon-link" *ngIf="isClient">
+        <img src="assets/images/icons/navbar/heart.svg" alt="Wishlist Icon" class="nav-icon">
+      </a>
+
+      <!-- Shopping Icon -->
+      <a routerLink="/cart" class="icon-link" (mouseover)="toggleCartDropdown()" (mouseleave)="closeCartDropdown()" *ngIf="isClient">
+        <img src="assets/images/icons/navbar/shopping-cart-simple.svg" alt="Shopping Cart Icon" class="nav-icon">
+        <!-- Shopping Cart Dropdown -->
+        <div class="cart-dropdown" *ngIf="isCartDropdownOpen" (mouseover)="toggleCartDropdown()" (mouseleave)="closeCartDropdown()">
+          <app-shopping-cart></app-shopping-cart>
+        </div>
+      </a>
+
+      <!-- Account Icon & Dropdown -->
+      <div class="dropdown" *ngIf="isLoggedIn()">
+        <a class="icon-link" (click)="toggleDropdown()">
+          <img src="assets/images/icons/navbar/user-circle.svg" alt="Account Icon" class="nav-icon">
+        </a>
+        <div class="dropdown-content" [class.show]="isDropdownOpen">
+          <a routerLink="account/editaccount"><img src="assets/images/icons/navbar/gear.svg" alt="Gear Icon" class="dropdown-icon">Edit Account</a>
+          <a routerLink="myorders" *ngIf="isClient"><img src="assets/images/icons/navbar/download-simple.svg" alt="Download Icon">My Orders</a>
+          <a routerLink="account/manageclients" *ngIf="isAdmin"><img src="assets/images/icons/navbar/users-three.svg" alt="Download Icon">Manage Clients</a>
+          <a (click)="openModal()"><img src="assets/images/icons/navbar/power.svg" alt="Logout Icon">Logout</a>
+        </div>
+      </div>
+
+      <!-- Login -->
+      <button class="btn-login" routerLink="account/login" *ngIf="!isLoggedIn()">Login</button>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <img class="hamburger-icon" src="assets/images/icons/navbar/hamburgerIcon.png">
+    </div>
+  </div>
+</header>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <p>Are you sure you want to logout?</p>
+    <div class="buttons-container">
+      <button (click)="logout()" class="modal-btn">Yes</button>
+      <button (click)="closeModal()" class="modal-btn">No</button>
+    </div>
+  </div>
+</div>
+

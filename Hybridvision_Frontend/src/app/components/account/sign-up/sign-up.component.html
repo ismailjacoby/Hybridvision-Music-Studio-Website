@@ -1,0 +1,58 @@
+<!-- Main Container -->
+<div class="signup-container">
+
+  <!-- Title -->
+  <h2>Sign Up</h2>
+
+  <!-- Form -->
+  <form class="form" [formGroup]="form" (ngSubmit)="signUp()">
+
+    <!-- Username -->
+    <input type="text" name="username" placeholder="*Username" formControlName="username">
+    <div *ngIf="form.controls['username'].invalid && form.controls['username'].touched" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Username is required</div>
+
+    <!-- Firstname -->
+    <input type="text" name="firstName" placeholder="*First Name" formControlName="firstName">
+    <div *ngIf="form.controls['firstName'].invalid && form.controls['firstName'].touched" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">First name is required</div>
+
+    <!-- Lastname -->
+    <input type="text" name="lastName" placeholder="*Last Name" formControlName="lastName">
+    <div *ngIf="form.controls['lastName'].invalid && form.controls['lastName'].touched" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">First name is required</div>
+
+    <!-- Email -->
+    <input type="text" name="email" placeholder="*Email" formControlName="email">
+    <div *ngIf="form.controls['email'].touched">
+      <div *ngIf="form.controls['email'].errors?.['required']" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Email is required</div>
+      <div *ngIf="form.controls['email'].errors?.['email']" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Invalid Email format</div>
+    </div>
+
+    <!-- Password -->
+    <input type="password" name="password" placeholder="*Password" formControlName="password">
+    <div *ngIf="form.controls['password'].touched">
+      <div *ngIf="form.controls['password'].errors?.['required']" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Password is required</div>
+      <div *ngIf="form.controls['password'].errors?.['passwordMinLength']" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Password must be at least 6 characters long</div>
+    </div>
+
+    <!-- Sign up - Button -->
+    <input type="submit" value="SIGN UP" class="submit-btn" [disabled]="!form.valid">
+
+    <!-- Login -->
+    <p>Already have an account? <a routerLink="../login" id="login-btn">Login</a></p>
+  </form>
+
+  <!-- Message -->
+  <div class="message-box">
+
+    <!-- Success Message -->
+    <div *ngIf="successMessage" class="message success-message">
+      <img src="assets/images/404/check-circle.png" alt="Error Icon" class="error-icon">
+      <span>{{ successMessage }}</span>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="message error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">
+      <span>{{ errorMessage }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,262 @@
+/* Header Style */
+.header {
+  background-color: black;
+  padding: 20px 0;
+  font-family: 'Drukwide',sans-serif;
+  font-size: 12px;
+  position:fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Nav spacing */
+.header-content {
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Nav Links */
+.nav-list{
+  display: flex;
+}
+.nav-links ul {
+  list-style-type: none;
+}
+.nav-links li {
+  margin-right: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Wishlist, Cart, Account */
+.nav-icon {
+  width: 25px;
+  height: auto;
+  filter: invert(1);
+}
+
+/* Align Icons in a row */
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons .icon-link {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-icons .icon-link:last-child {
+  margin-right: 0;
+}
+.nav-icons .icon-link img {
+  vertical-align: middle;
+}
+
+/* Wishlist Shopping Cart quantity indicator*/
+.icon-badge {
+  position: absolute;
+  color: white;
+  font-size: 8px;
+}
+
+
+/* Hamburger Menu */
+.hamburger{
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+.hamburger-icon{
+  width: 30px;
+}
+
+/* Login */
+.btn-login{
+  background-color: black;
+  margin-left: 50px;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+.btn-login:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: -100%;
+}
+.dropdown-content img{
+  filter: invert(1);
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.dropdown-content a {
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 1200px) {
+  .nav-logo{
+    width: 50px;
+  }
+  .header-content{
+    width: 80%;
+    margin: 0 auto;
+
+  }
+  .nav-links{
+    position: fixed;
+    top:60px;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .nav-links.open{
+    transform: translateX(0%);
+  }
+  .nav-item{
+    font-size: 12px;
+  }
+  .show{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+}
+
+/* Modal Content */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #fff;
+  width: 20%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 25px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-btn{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.2s;
+}
+
+.modal-btn:hover{
+  transform: scale(1.025);
+  cursor: pointer;
+  background-color: #EF3232;
+}
+
+.dropdown-content a:hover img{
+  filter: invert(0);
+}
+
+/* Add styles for the cart dropdown */
+.cart-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: none;
+  color: black;
+}
+
+/* Show the dropdown when hovered over the cart icon */
+.icon-link:hover .cart-dropdown {
+  display: block;
+}

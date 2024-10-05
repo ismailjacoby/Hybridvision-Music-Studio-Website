@@ -1,0 +1,49 @@
+.unsubscribe-container {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Drukwide', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="email"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline-color: black;
+}
+
+button[type="submit"] {
+  border: none;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.01);
+  text-decoration: underline;
+}
+
+p,label {
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+}

@@ -1,0 +1,117 @@
+/* Title */
+h2{
+  font-family: 'Drukwide', sans-serif;
+  font-size: 20px;
+}
+
+/* Paragraph */
+p{
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+/* FAQ Link */
+a{
+  color: black;
+}
+
+/* Form */
+.contact-container {
+  max-width: 750px;
+  text-align: center;
+  margin: 0 auto 100px;
+}
+
+/* Label */
+.form label {
+  display: block;
+  text-align: left;
+  width: 83%;
+  margin: 0 auto 5px;
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+}
+
+/* Form Input */
+.form input {
+  width: 80%;
+  margin: 0 auto 10px;
+  font-family: Sequel, sans-serif;
+  font-size: 10px;
+  padding: 10px;
+  outline-color: black;
+}
+
+/* Form Textarea */
+.form textarea {
+  width: 80%;
+  margin: 0px auto 10px;
+  padding: 10px;
+  resize: vertical;
+  font-family: Sequel, sans-serif;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: 0.1s;
+  outline-color: black;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  transition: 0.2s ;
+}
+
+.submit-btn:hover {
+  transform: scale(1.025);
+  background-color: #EF3232;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Message */
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Success Message */
+.successMessage {
+  font-family: 'Sequel', sans-serif;
+  color: #32ef3b;
+  font-size: 12px;
+}
+
+/* Error Message */
+.error-message {
+  font-family: 'Sequel', sans-serif;
+  color: #EF3232;
+  font-size: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Message Icon */
+.error-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}

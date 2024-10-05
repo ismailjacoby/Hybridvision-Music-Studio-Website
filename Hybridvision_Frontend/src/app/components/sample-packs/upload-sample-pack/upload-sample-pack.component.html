@@ -1,0 +1,32 @@
+<div class="upload-sample-container">
+  <h2>Upload Sample Pack</h2>
+
+  <form [formGroup]="uploadSampleForm">
+    <input type="text" formControlName="title" placeholder="*Title" class="input-sample">
+    <textarea formControlName="description" placeholder="*Description" class="input-sample"></textarea>
+    <input type="number" formControlName="price" placeholder="*Price" class="input-sample">
+
+    <div class="upload-sample-files">
+      <div class="drop-zone-sample" (dragover)="onDragOver($event)" (drop)="onDrop($event, 'coverImage')">
+        <input id="coverImage" type="file" (change)="onFileSelected($event, 'coverImage')" hidden>
+        <label for="coverImage"><img src="assets/images/productions/file-image.svg" alt="Cover Icon" class="file-image-sample">Cover</label>
+        <p *ngIf="selectedCoverImageName">{{selectedCoverImageName}}</p>
+      </div>
+      <div class="drop-zone-sample" (dragover)="onDragOver($event)" (drop)="onDrop($event, 'audioUrl')">
+        <input id="audioUrl" type="file" (change)="onFileSelected($event, 'audioUrl')" hidden>
+        <label for="audioUrl"><img src="assets/images/productions/file-audio.svg" alt="Audio Icon" class="file-image-sample">Audio</label>
+        <p *ngIf="selectedAudioFileName">{{selectedAudioFileName}}</p>
+      </div>
+    </div>
+
+    <input type="submit" value="SUBMIT" class="submit-btn-sample" (click)="onSubmit()" [disabled]="!uploadSampleForm.valid">
+
+    <div *ngIf="uploadProgress > 0">
+      <progress value="{{uploadProgress}}" max="100"></progress>
+      <p>{{uploadProgress}}%</p>
+    </div>
+
+    <!-- Display upload message -->
+    <p *ngIf="uploadMessage">{{uploadMessage}}</p>
+  </form>
+</div>

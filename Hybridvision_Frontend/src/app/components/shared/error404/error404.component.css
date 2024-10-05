@@ -1,0 +1,45 @@
+/*404*/
+h1 {
+  font-family: 'Drukwide', sans-serif;
+  font-size: 200px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Headphone */
+#headphones-icon{
+  height: 300px;
+}
+
+/* Message container*/
+.error-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Message */
+p {
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.025);
+  background-color: #EF3232;
+}

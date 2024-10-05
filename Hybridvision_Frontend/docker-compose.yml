@@ -1,0 +1,21 @@
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+      - ./nginx.conf
+
+  hybridvisionapp:
+    container_name: hybridvisionappcontainer
+    build: .
+    image: hybridvisionapp:v1
+    ports:
+      - 80:80
+    expose:
+      - 80
+    networks:
+      - internalnet
+
+networks:
+  internalnet:
+    driver: bridge

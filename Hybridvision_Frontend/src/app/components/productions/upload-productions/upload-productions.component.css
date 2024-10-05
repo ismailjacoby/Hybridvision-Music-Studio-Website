@@ -1,0 +1,132 @@
+.upload-container{
+  width: 750px;
+  margin: 0 auto;
+}
+
+h2{
+  font-family: 'Drukwide', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+label{
+  font-family: 'Sequel', sans-serif;
+  font-size: 14px;
+  margin: 10px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: block;
+  margin: 10px;
+  padding: 8px;
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline-color: black;
+}
+
+.file-image{
+  height: 20px;
+  width: auto;
+}
+
+.upload-files{
+  width: 50%;
+  display: flex;
+}
+
+.drop-zone input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.drop-zone {
+  max-width: 75px;
+  overflow: hidden;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.drop-zone, input, label:hover{
+  cursor: pointer;
+}
+
+.drop-zone:hover, .drop-zone.dragover {
+  border-color: #000;
+}
+
+.drop-zone p {
+  margin: 0;
+  font-family: 'Sequel', sans-serif;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  transition: 0.2s ;
+}
+
+.submit-btn:hover {
+  transform: scale(1.025);
+  background-color: #EF3232;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+}
+
+progress::-webkit-progress-value {
+  background-color: #000;
+}
+
+progress::-moz-progress-bar {
+  background-color: #000;
+}
+
+.upload-container .drop-zone p {
+  font-size: 10px;
+  color: #666;
+  margin-top: 5px;
+}
+
+p{
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+}

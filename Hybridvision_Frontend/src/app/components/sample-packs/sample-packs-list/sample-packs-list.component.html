@@ -1,0 +1,38 @@
+<!-- Main Container -->
+<div class="sample-pack-container">
+
+  <!-- Title -->
+  <h2>Sample Packs</h2>
+  <div class="sample-pack-upload" *ngIf="isAdmin">
+    <button class="upload-btn" routerLink="../upload"><img src="assets/images/productions/upload-simple.svg" alt="Upload Icon" class="icon-upload">Upload Sample Pack</button>
+  </div>
+
+  <!-- Sample Pack - List -->
+  <div class="sample-pack-list">
+    <!-- Sample Pack - Loop Start-->
+    <div class="sample-pack" *ngFor="let samplepack of samplePacks">
+      <!-- Image -->
+      <div class="sample-pack-cover">
+        <img src="{{samplepack.coverImageUrl}}" alt="Sample Pack Cover" [routerLink]="['../', samplepack.id]">
+        <!-- Delete Button (visible only to admins) -->
+        <button *ngIf="isAdmin" class="delete-button" (click)="deleteSamplePack(samplepack.id)">X</button>
+      </div>
+      <!-- Title -->
+      <div class="sample-pack-title">
+        <h3 [routerLink]="['../', samplepack.id]">{{samplepack.title}}</h3>
+      </div>
+      <!-- Price, Wishlist, Shopping List -->
+      <div class="sample-pack-shop">
+        <!-- Price -->
+        <p class="price-text">{{samplepack.price | currency: 'EUR'}}</p>
+        <!-- Wishlist -->
+        <button class="sample-pack-button" (click)="addToWishlist(samplepack.id)" title="Login to add to wishlist" [disabled]="!isLoggedIn"><img src="assets/images/icons/navbar/heart.svg" alt="Add to wishlist icon" class="button-icon"></button>
+        <!-- Add to cart -->
+        <button class="sample-pack-button" (click)="addToCart(samplepack.id)" title="Login to add to cart" [disabled]="!isLoggedIn">Add to Cart</button>
+      </div>
+    </div>
+    <!-- Sample Pack - Loop End-->
+
+
+  </div>
+</div>

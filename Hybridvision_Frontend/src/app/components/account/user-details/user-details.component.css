@@ -1,0 +1,120 @@
+h2 {
+  font-family: 'Drukwide', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.information-box{
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  border: 1px solid black;
+}
+
+.user-information{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+}
+
+.information{
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.btn-container button{
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  transition: 0.2s;
+}
+
+.btn-container button:hover{
+  cursor: pointer;
+  transform: scale(1.025);
+  background-color: #EF3232;
+}
+
+.link-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+a{
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button{
+  display: flex;
+  align-items: center;
+}
+
+img{
+  height: 20px;
+  filter: invert(1);
+  vert-align: middle;
+  margin-right: 5px;
+}
+
+li{
+  font-size: 11px;
+}
+
+.order-table {
+  width: 100%;
+  background-color: white;
+  color: black;
+  margin: 20px 0;
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+.order-table table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+  text-align: center;
+  padding: 8px;
+
+}
+
+.order-table th {
+  background-color: transparent;
+  color: black;
+}
+
+.order-table tr:hover {
+  background-color: #f5f5f5;
+}

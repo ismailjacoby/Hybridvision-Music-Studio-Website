@@ -1,0 +1,92 @@
+.upload-sample-container {
+  width: 750px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Drukwide', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+label {
+  font-family: 'Sequel', sans-serif;
+  font-size: 14px;
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-sample {
+  display: block;
+  margin: 10px;
+  padding: 8px;
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline-color: black;
+}
+
+.file-image-sample {
+  height: 20px;
+  width: auto;
+}
+
+.upload-sample-files {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.drop-zone-sample {
+  max-width: 75px;
+  overflow: hidden;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+textarea, input{
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+}
+
+.drop-zone-sample:hover, .drop-zone-sample.dragover {
+  border-color: #000;
+}
+
+.submit-btn-sample {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.submit-btn-sample:hover {
+  transform: scale(1.025);
+  background-color: #EF3232;
+}
+
+.submit-btn-sample:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+

@@ -1,0 +1,77 @@
+h2{
+  font-family: 'Drukwide', sans-serif;
+  text-align: center;
+}
+
+p{
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Sequel',sans-serif;
+  font-size: 10px;
+}
+
+/* Licensing */
+/* License - Section */
+.license-section {
+  font-family: Sequel, sans-serif;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 5px;
+  width: 95%;
+}
+
+/* License - Card */
+.license {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 2px 2px 5px  rgba(0, 0, 0, .1);
+  transition: 0.2s;
+}
+
+.license h3 {
+  font-family: 'Drukwide', sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+.license h4 {
+  margin-bottom: 5px;
+  font-family: 'Sequel', sans-serif;
+  font-size: 16px;
+}
+
+.license ul {
+  padding-left:0px;
+}
+
+.license ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+/* License - Read License */
+.license-btn{
+  font-family: 'Sequel', sans-serif;
+  background-color: black;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 10px;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.license-btn:hover{
+  transform: scale(1.025);
+  background-color: #EF3232;
+  cursor: pointer;
+}

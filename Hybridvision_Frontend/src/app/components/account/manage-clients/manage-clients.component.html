@@ -1,0 +1,52 @@
+<!-- Main Container -->
+<div class="manage-clients-container">
+
+  <!-- Title -->
+  <h2>Manage Clients</h2>
+
+  <!-- Filter -->
+  <div class="filter-container">
+    <div class="filter-input">
+      <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="searchTerms.next($event)" placeholder="Search">
+    </div>
+  </div>
+
+    <!-- Table -->
+  <table>
+    <!--Table Header-->
+    <thead>
+      <tr>
+        <th (click)="sortData('username')">Username<span *ngIf="sortColumn === 'username'"><img src="assets/images/manageclients/{{sortDirection === 'asc' ? 'arrow-up.svg' : 'arrow-down.svg'}}" class="sort-icon" alt="Sort Icon"></span></th>
+        <th (click)="sortData('firstName')">Firstname<span *ngIf="sortColumn === 'firstName'"><img src="assets/images/manageclients/{{sortDirection === 'asc' ? 'arrow-up.svg' : 'arrow-down.svg'}}" class="sort-icon" alt="Sort Icon"></span></th>
+        <th (click)="sortData('lastName')">Lastname<span *ngIf="sortColumn === 'lastName'"><img src="assets/images/manageclients/{{sortDirection === 'asc' ? 'arrow-up.svg' : 'arrow-down.svg'}}" class="sort-icon" alt="Sort Icon"></span></th>
+        <th (click)="sortData('email')">Email<span *ngIf="sortColumn === 'email'"><img src="assets/images/manageclients/{{sortDirection === 'asc' ? 'arrow-up.svg' : 'arrow-down.svg'}}" class="sort-icon" alt="Sort Icon"></span></th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <!--Table Rows-->
+    <tbody>
+      <tr *ngFor="let client of filteredClients">
+        <td>{{client.username}}</td>
+        <td>{{client.firstName}}</td>
+        <td>{{client.lastName}}</td>
+        <td>{{client.email}}</td>
+
+        <!-- Actions -->
+        <td>
+          <!--View Icon-->
+          <img src="assets/images/manageclients/eye.png" routerLink="../user/{{client.username}}" title="View Client Detail" alt="View Icon" class="icon-action">
+
+          <!--Actve Icon-->
+          <img src="assets/images/manageclients/check-circle.png" (click)="changeActiveStatus(client.username)" title="Click to mark user as inactive" alt="Active Icon" *ngIf="client.active" class="icon-action">
+          <img src="assets/images/manageclients/x-circle-blocked.png" (click)="changeActiveStatus(client.username)" title="Click to mark user as active" alt="Inactive Icon" *ngIf="!client.active" class="icon-action">
+
+          <!--Block Icon-->
+          <img src="assets/images/manageclients/blocked.png" (click)="changeBlockedStatus(client.username)" title="Click to unblock user" alt="Block user icon" class="icon-action" *ngIf="client.blocked">
+          <img src="assets/images/manageclients/notblocked.png" (click)="changeBlockedStatus(client.username)" title="Click to block user" alt="Block user icon" class="icon-action" *ngIf="!client.blocked">
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

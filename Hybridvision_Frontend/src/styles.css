@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* FONTS */
+@font-face {
+  font-family: 'Druk';
+  src: url(/assets/fonts/Druk-Medium-Trial.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'DrukWide';
+  src: url(/assets/fonts/DrukTextWide-Medium-Trial.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url(/assets/fonts/SuisseIntl-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sequel';
+  src: url(/assets/fonts/Sequel100Black-45.ttf) format('truetype');
+}
+
+
+/* BODY */
+body{
+  margin: 0;
+  padding: 0;
+  padding-top: 110px;
+  padding-bottom: 200px;
+}

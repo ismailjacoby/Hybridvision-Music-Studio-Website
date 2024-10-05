@@ -1,0 +1,91 @@
+/* Title */
+h2{
+  font-family: 'Drukwide', sans-serif;
+  font-size: 20px;
+}
+
+/* Filter */
+.filter-container {
+  display: block;
+}
+
+.filter-container input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline-color: black;
+}
+
+/* Filter Container */
+.manage-clients-container{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Rows */
+.manage-clients-list{
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Icons */
+.icon-action{
+  margin-left: 5px;
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+.icon-action:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Sort Icon */
+.sort-icon{
+  vertical-align: middle;
+  height: 15px;
+  width: auto;
+  filter: invert(1);
+}
+
+/* Table */
+table{
+  width: 80%;
+  margin: 25px auto 0;
+  font-family: 'Sequel', sans-serif;
+}
+
+thead{
+  font-size: 12px;
+}
+
+tbody{
+  font-size: 10px;
+}
+
+th{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+tr{
+  height: 35px;
+}
+
+table,tr{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td{
+  font-size: 11px;
+}

@@ -1,0 +1,88 @@
+/* Main title */
+h2{
+  font-family: 'Drukwide', sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+/* Card Flexbox */
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Card settings */
+.service-card {
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.service-card:hover {
+  background-color: #e8e8e8;
+}
+
+/* Card Icons */
+.service-icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Card Title */
+h3{
+  font-family: 'Drukwide', sans-serif;
+  font-size: 18px;
+}
+
+/* Card description */
+.service-card p {
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+/* Interested Section */
+.interested{
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Interested paragraph */
+.interested p{
+  margin-bottom: 25px;
+}
+
+
+/* Contact Button */
+.interested input{
+  font-size: 12px;
+  font-family: 'Sequel', sans-serif;
+  background-color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.interested input:hover{
+  transform: scale(1.025);
+  background-color: #EF3232;
+  cursor: pointer;
+}

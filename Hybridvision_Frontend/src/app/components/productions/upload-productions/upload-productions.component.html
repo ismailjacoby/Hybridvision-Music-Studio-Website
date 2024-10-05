@@ -1,0 +1,46 @@
+<div class="upload-container">
+  <h2>Upload Production</h2>
+
+  <form [formGroup]="uploadForm">
+    <input type="text" formControlName="title" placeholder="*Title" class="input">
+    <input type="number" formControlName="bpm" placeholder="*BPM" class="input">
+    <input type="date" formControlName="releaseDate" class="input">
+
+    <div class="upload-files">
+      <div class="drop-zone" (dragover)="onDragOver($event)" (drop)="onDrop($event, 'mp3')">
+        <input id="mp3" type="file" (change)="onFileSelected($event, 'audioMp3')" hidden>
+        <label for="mp3"><img src="assets/images/productions/file-audio.svg" alt="Audio Icon" class="file-image">MP3</label>
+        <p *ngIf="selectedMp3FileName">{{selectedMp3FileName}}</p>
+      </div>
+      <div class="drop-zone" (dragover)="onDragOver($event)" (drop)="onDrop($event, 'wav')">
+        <input id="wav" type="file" (change)="onFileSelected($event, 'audioWav')" hidden>
+        <label for="wav"><img src="assets/images/productions/file-audio.svg" alt="Audio Icon" class="file-image">Wav</label>
+        <p *ngIf="selectedWavFileName">{{selectedWavFileName}}</p>
+      </div>
+      <div class="drop-zone" (dragover)="onDragOver($event)" (drop)="onDrop($event, 'zip')">
+        <input id="zip" type="file" (change)="onFileSelected($event, 'audioZip')" hidden>
+        <label for="zip"><img src="assets/images/productions/file-zip.svg" alt="Audio Icon" class="file-image">Zip</label>
+        <p *ngIf="selectedZipFileName">{{selectedZipFileName}}</p>
+      </div>
+      <div class="drop-zone" (dragover)="onDragOver($event)" (drop)="onDrop($event, 'image')">
+        <input id="image" type="file" (change)="onFileSelected($event, 'coverImage')" hidden>
+        <label for="image"><img src="assets/images/productions/file-image.svg" alt="Audio Icon" class="file-image">Cover</label>
+        <p *ngIf="selectedCoverImageName">{{selectedCoverImageName}}</p>
+      </div>
+    </div>
+
+    <select formControlName="genre" class="input">
+      <option value="" disabled selected>Select Genre</option>
+      <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
+    </select>
+
+    <input type="submit" value="SUBMIT" class="submit-btn" (click)="onSubmit()" [disabled]="!uploadForm.valid">
+    <div *ngIf="uploadProgress > 0">
+      <progress value="{{uploadProgress}}" max="100"></progress>
+      <p>{{uploadProgress}}%</p>
+    </div>
+
+    <!-- Display upload message -->
+    <p *ngIf="uploadMessage">{{uploadMessage}}</p>
+  </form>
+</div>

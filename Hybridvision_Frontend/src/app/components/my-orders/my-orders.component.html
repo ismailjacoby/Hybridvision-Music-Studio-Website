@@ -1,0 +1,24 @@
+<div class="order-table">
+
+  <h2>Purchase History</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Purchase Date</th>
+      <th>Total Amount Paid</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.id }}</td>
+      <td>{{ order.orderDate | date: 'mediumDate' }}</td>
+      <td>{{ order.totalAmount | currency }}</td>
+      <td>{{ order.paymentStatus }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

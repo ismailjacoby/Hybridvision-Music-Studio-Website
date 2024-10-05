@@ -1,0 +1,72 @@
+<!-- Main Content -->
+<footer class="footer">
+
+  <!-- Company Section -->
+  <div class="footer-informations show">
+    <h2>Hybridvision Sarl-s</h2>
+    <div class="company-information">
+      <p>37 Cité Louis Blum<br>4034 Esch-sur-Alzette<br>Luxembourg</p>
+      <p>Email: info&#64;hybrid-vision.com<br>Tva: LU31870888<br>Rcs: B239614</p>
+    </div>
+  </div>
+
+  <!-- Links Section -->
+  <div class="footer-links show">
+    <h2>Links</h2>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/services">Services</a></li>
+      <li><a routerLink="/productions">Productions</a></li>
+      <li><a routerLink="/samplepacks">Sample Packs</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Guidelines Section -->
+  <div class="footer-guidelines show">
+    <h2>Guidelines</h2>
+    <ul>
+      <li><a routerLink="/licensing">Licensing Info</a></li>
+      <li><a routerLink="/termsofuse">Terms of Use</a></li>
+      <li><a routerLink="/privacypolicy">Privacy Policy</a></li>
+      <li><a routerLink="/faq">F.A.Q</a></li>
+    </ul>
+  </div>
+
+  <!-- Newsletter Section -->
+  <div class="footer-news show">
+    <!-- Newsletter -->
+    <h2>Newsletter</h2>
+    <form class="subscribe" [formGroup]="form" (ngSubmit)="subscribe()">
+      <input type="email" placeholder="Enter your email..." id="newletter-input" formControlName="email">
+      <input type="submit" value="Subscribe" id="subscribe-button">
+    </form>
+
+    <!-- Success Message -->
+    <div *ngIf="successMessage" class="message success-message">
+      <span>{{ successMessage }}</span>
+      <span class="icon">&#10003;</span>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="message error-message">
+      <span>{{ errorMessage }}</span>
+    </div>
+
+    <!-- Get in Touch -->
+    <div class="get-in-touch">
+      <h3>Get in touch</h3>
+      <ul class="social-icons">
+        <li><a href="https://instagram.com/hybridvisionstudios" target="_blank"><img src="../../../assets/images/icons/footer/instagramIcon.png" alt="Instgram Icon"></a></li>
+        <li><a href="#"><img src="../../../assets/images/icons/footer/xIcon.png" target="_blank" alt="X Icon"></a></li>
+        <li><a href="https://www.youtube.com/@HybridVisionMusic" target="_blank"><img src="../../../assets/images/icons/footer/youtubeIcon.png" alt="Youtube Icon"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Mobile -->
+  <div class="mobile-footer">
+    &copy; 2024 Hybridvision
+  </div>
+</footer>

@@ -1,0 +1,63 @@
+<!-- Main Container -->
+<div class="contact-container">
+  <!-- Title -->
+  <h2>Contact Us</h2>
+  <!-- Paragraph -->
+  <p>Got questions about our services, booking process, or anything music-related?<br>
+    Drop us a line! Whether you're curious about our beats, need assistance with booking a session, or have specific requests for your project, we're here to help.<br>
+    If you're reaching out regarding a booking or inquiry, please include relevant details to expedite our response.<br><br>
+    For general inquiries, feel free to check out our <a routerLink="../faq">F.A.Q</a> section.
+  </p>
+
+  <!-- Form -->
+  <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <!-- First Name-->
+    <label for="firstName">First Name</label>
+    <input id="firstName" type="text" name="firstName" placeholder="*First Name" formControlName="firstName">
+    <div *ngIf="contactForm.controls['firstName'].touched && contactForm.controls['firstName'].errors?.['required']" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">First Name is required.
+    </div>
+
+    <!-- Last Name-->
+    <label for="lastName">First Name</label>
+    <input id="lastName" type="text" name="lastName" placeholder="*Last Name" formControlName="lastName">
+    <div *ngIf="contactForm.controls['lastName'].touched && contactForm.controls['lastName'].errors?.['required']" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Last Name is required.
+    </div>
+
+    <!-- Email-->
+    <label for="email">Email</label>
+    <input id="email" type="text" name="email" placeholder="*Email" formControlName="email">
+    <div *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].errors?.['required']" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Email is required.
+    </div>
+    <div *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].errors?.['email']" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Invalid Email format.
+    </div>
+
+    <!-- Subject-->
+    <label for="subject">Subject</label>
+    <input id="subject" type="text" name="subject" placeholder="*Subject" formControlName="subject">
+    <div *ngIf="contactForm.controls['subject'].touched && contactForm.controls['subject'].errors?.['required']" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Subject is required.
+    </div>
+
+    <!-- Message-->
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="*Write your message" rows="5" formControlName="message"></textarea>
+    <div *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].errors?.['required']" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Message is required.
+    </div>
+    <div *ngIf="contactForm.controls['message'].errors?.['minlength']" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Message needs to be at least 10 characters long.
+    </div>
+
+    <!-- Button-->
+    <input type="submit" value="SUBMIT" class="submit-btn"  [disabled]="!contactForm.valid">
+  </form>
+  <div *ngIf="successMessage" class="successMessage">
+    <img src="assets/images/404/check-circle.png" alt="Error Icon" class="error-icon">
+    {{ successMessage }}
+  </div>
+</div>
+

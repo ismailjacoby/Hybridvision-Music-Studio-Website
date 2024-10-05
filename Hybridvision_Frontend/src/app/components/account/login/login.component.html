@@ -1,0 +1,29 @@
+<div class="login-container">
+
+  <h2>Login</h2>
+
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Username" formControlName="username">
+    <div *ngIf="loginForm.controls['username'].errors?.['required'] && loginForm.controls['username'].touched" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Username is required.</div>
+
+
+    <input type="password" placeholder="Password" formControlName="password">
+    <div *ngIf="loginForm.controls['password'].touched">
+      <div *ngIf="loginForm.controls['password'].errors?.['required']" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Password is required</div>
+      <div *ngIf="loginForm.controls['password'].errors?.['passwordMinLength']" class="error-message"><img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">Password must be at least 6 characters long</div>
+    </div>
+
+    <div class="form-actions">
+      <input type="submit" value="Login" class="submit-btn" [disabled]="!loginForm.valid">
+      <a routerLink="../forgotpassword" class="forgot-password">Forgot password?</a>
+    </div>
+    <p>Don't have an account? <a routerLink="../signup" id="signup-btn">Sign up</a></p>
+
+    <div *ngIf="errorMessage" class="error-message">
+      <img src="assets/images/404/warning-circle.png" alt="Error Icon" class="error-icon">
+      <div >{{ errorMessage }}</div>
+    </div>
+
+  </form>
+
+</div>

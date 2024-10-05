@@ -1,0 +1,266 @@
+/* Main container */
+.signup-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Title */
+h2{
+  font-family: 'Drukwide', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Label */
+.form label {
+  align-self: flex-start;
+  width: 83%;
+  margin: 0 auto 5px;
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+}
+
+/* Form - Input */
+.form input {
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+}
+
+
+/* Form - Button */
+.submit-btn {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  transition: 0.2s ;
+}
+
+.submit-btn:hover {
+  transform: scale(1.025);
+  background-color: #EF3232;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Message */
+.success-message, .error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Sequel', sans-serif;
+  font-size: 14px;
+}
+
+/* Success Message */
+.success-message {
+  font-family: 'Sequel', sans-serif;
+  color: #32ef3b;
+  font-size: 12px;
+}
+
+/* Error Message */
+.error-message {
+  font-family: 'Sequel', sans-serif;
+  color: #EF3232;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Error Icon */
+.error-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle-switch {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.toggle-switch span {
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: 'Sequel', sans-serif;
+}
+
+input:disabled{
+  cursor: not-allowed;
+}
+
+
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.delete-btn {
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  background-color: #EF3232;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  transition: 0.2s;
+}
+
+.delete-btn:disabled{
+  background-color: #e86464;
+  cursor: not-allowed;
+}
+
+.delete-btn:hover{
+  transform: scale(1.025);
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Modal Content */
+.modal-content {
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #fff;
+  width: 20%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 25px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Button */
+.modal-btn{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.1s;
+}
+
+.modal-btn:hover{
+  transform: scale(1.025);
+  cursor: pointer;
+  background-color: #EF3232;
+}

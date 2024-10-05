@@ -1,0 +1,149 @@
+
+/* Main Container */
+.sample-pack-container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Title */
+h2{
+  text-align: center;
+  font-family: 'Drukwide', sans-serif;
+  font-size: 20px;
+}
+
+/* Image */
+.sample-pack-cover img{
+  width: 225px;
+  height: auto;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+/* Sample Pack - List */
+.sample-pack-list{
+  font-family: 'Sequel', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Sample Pack - Card */
+.sample-pack{
+  width: 225px;
+  text-align: center;
+  margin: 10px;
+}
+
+/* Sample Pack - Title */
+.sample-pack-title{
+  font-size: 12px;
+}
+
+/* Sample Pack - Price, Wishlist, Add to cart section */
+.sample-pack-shop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Button Icons */
+.button-icon{
+  height: 15px;
+  width: auto;
+  filter: invert(1);
+}
+
+/* Button */
+.sample-pack-button{
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  margin: 5px;
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  vertical-align: middle;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sample-pack-button:hover{
+  transform: scale(1.025);
+  background-color: #EF3232;
+}
+
+/* Price Size */
+.sample-pack-shop p{
+  font-size: 14px;
+}
+
+.upload-btn {
+  padding: 8px 12px;
+  margin: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Sequel', sans-serif;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #EF3232;
+  color: white;
+  border: 1px solid #EF3232;
+}
+.upload-btn:hover .icon-upload {
+  filter: invert(1);
+}
+
+.icon-upload{
+  height: 15px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.sample-pack-upload{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sample-pack-cover {
+  position: relative;
+  display: inline-block;
+  width: 225px;
+  height: auto;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: #EF3232;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 0 5px 0 5px; /* Rounded corner on the bottom-left */
+}
+
+h3{
+  cursor: pointer;
+}
+
+
+button:disabled{
+  opacity: 0.25;
+  cursor: not-allowed;
+}

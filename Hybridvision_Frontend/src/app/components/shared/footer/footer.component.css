@@ -1,0 +1,88 @@
+/* Footer Settings */
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  color: white;
+  font-family: 'Sequel', sans-serif;
+  font-size: 10px;
+  padding: 10px;
+}
+
+/* Title */
+h2{
+  font-family: 'Drukwide', sans-serif;
+  font-size: 12px;
+}
+
+/* Links & Text */
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+/*Newsletter*/
+#newletter-input{
+  width: 150px;
+  height: 20px;
+  margin-right: 0.25em;
+  font-family: 'Sequel', sans-serif;
+  font-size: 8px;
+  outline-color: black;
+}
+#subscribe-button{
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  font-family: 'Sequel', sans-serif;
+  width: 75px;
+  height: 25px;
+  font-size: 8px;
+}
+#subscribe-button:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/*Get In Touch*/
+.social-icons{
+  display: flex;
+}
+.social-icons img{
+  width: 25px;
+  height: auto;
+}
+.mobile-footer{
+  display: none;
+  padding: 10px;
+}
+
+span{
+  font-size: 8px;
+}
+
+/* Mobile */
+@media (max-width: 1200px) {
+  .show{
+    display: none;
+  }
+  .mobile-footer{
+    display: block;
+  }
+}

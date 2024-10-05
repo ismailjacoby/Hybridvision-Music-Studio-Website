@@ -1,0 +1,69 @@
+<!-- Main Container -->
+<div class="user-details-container">
+
+  <!-- Title -->
+  <h2>User Informations</h2>
+
+  <!-- Main Container -->
+  <div class="information-box">
+    <div class="user-information">
+
+      <!-- Username -->
+      <div class="information">
+        Username: {{client.username}}
+      </div>
+
+      <!-- Firstname -->
+      <div  class="information">
+        Firstname: {{client.firstName}}
+      </div>
+
+      <!-- Lastname -->
+      <div  class="information">
+        Lastname: {{client.lastName}}
+      </div>
+
+      <!-- Email -->
+      <div  class="information">
+        Email: {{client.email}}
+      </div>
+    </div>
+
+    <!-- Purchased Items -->
+    <div class="order-table" *ngIf="orders.length > 0">
+      <table>
+        <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Purchase Date</th>
+          <th>Total Amount Paid</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.orderDate | date: 'mediumDate' }}</td>
+          <td>{{ order.totalAmount | currency }}</td>
+          <td>{{ order.paymentStatus }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-container">
+      <!-- Activate / Deactivate -->
+      <button (click)="changeActiveStatus(client.username)" *ngIf="client.active"><img src="assets/images/manageclients/lock.svg" alt="Lock Icon">Deactivate Account</button>
+      <button (click)="changeActiveStatus(client.username)" *ngIf="!client.active"><img src="assets/images/manageclients/lock-key-open.svg" alt="Lock Icon">Activate Account</button>
+
+      <!-- Block / Unblock -->
+      <button (click)="changeBlockedStatus(client.username)" *ngIf="!client.blocked"><img src="assets/images/manageclients/lock.svg" alt="Lock Icon">Block Account</button>
+      <button (click)="changeBlockedStatus(client.username)" *ngIf="client.blocked"> <img src="assets/images/manageclients/lock-key-open.svg" alt="Lock Icon" class="btn-icon">Unblock Account</button>
+    </div>
+  </div>
+
+  <div class="link-container">
+    <a routerLink="../../manageclients">Back to manage clients</a>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="sample-pack-container">
+  <div class="sample-pack">
+    <div class="left-side">
+      <img [src]="coverUrl" alt="Sample Pack Image">
+    </div>
+    <div class="right-side">
+      <h3>{{title}}</h3>
+      <p class="sample-pack-description">{{description}}</p>
+
+      <p>Audio Preview:</p>
+      <audio controls>
+        <source [src]="audioUrl" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="price">{{ price }}</div>
+      <button mat-raised-button color="primary" (click)="addToCart(id)" title="Login to add to cart" [disabled]="!isLoggedIn">Add to Cart</button>
+    </div>
+  </div>
+  <a routerLink="../list">Back to Sample Packs</a>
+</div>
