@@ -47,8 +47,4 @@ This project was built as the **final project** for my **"9 month Java Angular T
 
 ## Setup Note
 
-⚠️ **Important**: All sensitive information, including passwords, API keys, and configurations, has been removed from this repository. The project will not run without setting up these credentials.
-
-You will need to configure the following services:
-- **Stripe**: Obtain your API keys from the [Stripe Dashboard](https://stripe.com) and configure the backend.
-- **AWS S3**: Set up an S3 bucket on AWS and add your AWS credentials to the backend configuration.
+⚠️ **Important**: All sensitive informations, including passwords, API keys, and configurations, have been removed from this repository. The project will not run without setting up these credentials.
