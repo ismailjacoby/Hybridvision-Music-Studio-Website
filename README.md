@@ -1,4 +1,4 @@
-# 🎵 Hybridvision - Music Studio Website
+# 🎵 Hybridvision - Music Studio Website (2024)
 
 A **Music Studio** website built with **Angular**, **Spring Boot**, **Stripe**, **AWS S3**, and **Docker**. 
 This platform allows users to explore the studio's services, purchase music productions, and sample packs, while providing an admin panel to manage users and content.
